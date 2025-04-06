@@ -67,27 +67,6 @@ node >= v14.0.0
 yarn (recommended) or npm
 ```
 
-### Installation Steps
-```bash
-# Step 1: Clone the repository
-git clone https://github.com/h-a-r-s-h-s-r-a-h/VoteChain.git
-cd votingSystem
-
-# Step 2: Install backend dependencies
-cd anchor-voting-program
-yarn install
-
-# Step 3: Build the Solana program
-anchor build
-
-# Step 4: Deploy to your preferred Solana network
-anchor deploy
-
-# Step 5: Install frontend dependencies and start Next.js server
-cd app
-yarn install
-yarn dev
-```
 
 ---
 
@@ -206,53 +185,3 @@ We've embraced **Next.js** for its versatility and modern features:
 
 ---
 
-## 🤝 **How to Contribute**
-
-We’re excited for contributions! Here’s how you can get started:
-
-### Steps to Contribute
-1. **Fork the Repository**:
-   ```bash
-   git clone https://github.com/h-a-r-s-h-s-r-a-h/VoteChain.git
-   ```
-
-2. **Create a Feature Branch**:
-   ```bash
-   git checkout -b feature/your-feature-name
-   ```
-
-3. **Commit Your Changes**:
-   ```bash
-   git commit -m "Add [Your Feature]"
-   ```
-
-4. **Push Changes**:
-   ```bash
-   git push origin feature/your-feature-name
-   ```
-
-5. **Open a Pull Request**:
-   Share your feature for review by the maintainers.
-
----
-
-## 📞 **Support Channels**
-
-Need help? You’ve got options:
-
-1. [Open a GitHub Issue](https://github.com/yourusername/votingSystem/issues): Report bugs or feature requests.
-2. **Join Our Discord Community**: Connect with other developers and maintainers.
-3. **Contact the Maintainers**: Reach out for dedicated support.
-
-### Helpful Resources
-- [Solana Documentation](https://docs.solana.com/)
-- [Anchor Framework Guide](https://project-serum.github.io/anchor/)
-- [Next.js Official Docs](https://nextjs.org/docs)
-
----
-
-<div align="center">
-Made with ❤️ using [Anchor Framework](https://project-serum.github.io/anchor/) and [Solana](https://solana.com/)—powered by **Next.js** for a seamless experience!
-</div>
-
----
