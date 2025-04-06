@@ -1,0 +1,11 @@
+pub const ANCHOR_DISCRIMINATOR: usize = 8;
+pub const PUBKEY_SIZE: usize = 32;
+pub const STRING_LENGTH_PREFIX: usize = 4;
+pub const MAX_DESCRIPTION_LENGTH: usize = 50;
+pub const MAX_TITLE_LENGTH: usize = 20;
+pub const MAX_CANDIDATE_NAME_LENGTH: usize = 20;
+pub const MAX_CANDIDATE_SLOGAN_LENGTH: usize = 50;
+pub const MAX_ELECTIONID_LENGTH: usize = 20;
+pub const U32_SIZE: usize = 4;
+pub const BOOL_SIZE: usize = 1;
+pub const MAX_CANDIDATEKEY_LENGTH: usize = 20;

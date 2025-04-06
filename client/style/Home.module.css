@@ -1,0 +1,143 @@
+/* App Container */
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background: radial-gradient(circle at 20% 20%, #0f172a, #1e293b);
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Header Section */
+.AppHeader {
+  height: 80px;
+  padding: 0 30px;
+  background-color: #0f172a;
+  border-bottom: 1px solid #334155;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.title {
+  font-size: 1rem;
+  color: #94a3b8;
+}
+
+.wallet-button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background-color: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 12px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+  transition: background 0.3s;
+}
+
+.wallet-button:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Body Section */
+.AppBody {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.logo-icon {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+.AppTitle {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.AppSubtitle {
+  font-size: 1.2rem;
+  color: #94a3b8;
+  margin-bottom: 40px;
+}
+
+.welcome-box {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 30px 40px;
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  max-width: 400px;
+}
+
+.welcome-text {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.start-button {
+  padding: 10px 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #6366f1, #7c3aed);
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.start-button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #4f46e5, #6d28d9);
+}
+/* Footer Section */
+.AppFooter {
+  height: auto;
+  background-color: #0f172a;
+  color: #64748b;
+  padding: 20px;
+  text-align: center;
+  border-top: 1px solid #334155;
+}
+
+.teamSection {
+  margin-top: 10px;
+  color: #94a3b8;
+}
+
+.teamSection h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.teamSection ul {
+  list-style: none;
+  padding: 0;
+}
+
+.teamSection li {
+  font-size: 1rem;
+  margin-bottom: 5px;
+}

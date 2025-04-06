@@ -1,0 +1,18 @@
+
+Hope you enjoy your new logo, here are the people that
+made your beautiful logo happen :)
+font name: MarkoOne-Regular
+font link: https://fonts.google.com/specimen/Marko+One
+font author: Cyreal
+font author site: http://www.cyreal.org/
+
+
+icon designer: Icons By Alfredo
+icon designer link: /AlfredoCreates
+        
+
+fontColor: {"hex":"#34A1E5"}
+bgColor: {"hex":"#0A1833"}
+iconColor: {"hex":"#34A1E5"}
+
+      

@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+   "typeRoots": ["./node_modules/@types"], // Ensure type definitions are resolved
+    "lib": ["es2015"], // Specify the ECMAScript library
+    "module": "commonjs", // Use CommonJS for Node.js compatibility
+    "target": "es6", // Target ES6 for modern JavaScript
+    "esModuleInterop": true, // Enable ES module interop
+    "forceConsistentCasingInFileNames": true, // Enforce consistent casing
+    "strict": true // Enable strict type checking
+  }
+}

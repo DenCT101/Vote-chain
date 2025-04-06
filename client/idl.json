@@ -1,0 +1,476 @@
+{
+  "address": "7QFYjVpv8vsSyxuiuLcTPpErcNkVZ1Liag8F9K5tqhVD",
+  "metadata": {
+    "name": "anchor_voting_program",
+    "version": "0.1.0",
+    "spec": "0.1.0",
+    "description": "Created with Anchor"
+  },
+  "instructions": [
+    {
+      "name": "add_candidate",
+      "discriminator": [
+        172,
+        34,
+        30,
+        247,
+        165,
+        210,
+        224,
+        164
+      ],
+      "accounts": [
+        {
+          "name": "candidate",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  97,
+                  110,
+                  100,
+                  105,
+                  100,
+                  97,
+                  116,
+                  101
+                ]
+              },
+              {
+                "kind": "arg",
+                "path": "candidate_key"
+              },
+              {
+                "kind": "arg",
+                "path": "election_id"
+              }
+            ]
+          }
+        },
+        {
+          "name": "election",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  101,
+                  108,
+                  101,
+                  99,
+                  116,
+                  105,
+                  111,
+                  110
+                ]
+              },
+              {
+                "kind": "arg",
+                "path": "election_id"
+              },
+              {
+                "kind": "account",
+                "path": "election_generator"
+              }
+            ]
+          }
+        },
+        {
+          "name": "election_generator",
+          "writable": true,
+          "signer": true,
+          "relations": [
+            "election"
+          ]
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "candidate_key",
+          "type": "string"
+        },
+        {
+          "name": "election_id",
+          "type": "string"
+        },
+        {
+          "name": "candidate_name",
+          "type": "string"
+        },
+        {
+          "name": "candidate_slogan",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "add_vote",
+      "discriminator": [
+        81,
+        36,
+        221,
+        115,
+        72,
+        168,
+        222,
+        43
+      ],
+      "accounts": [
+        {
+          "name": "candidate",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  97,
+                  110,
+                  100,
+                  105,
+                  100,
+                  97,
+                  116,
+                  101
+                ]
+              },
+              {
+                "kind": "arg",
+                "path": "candidate_key"
+              },
+              {
+                "kind": "arg",
+                "path": "election_id"
+              }
+            ]
+          }
+        },
+        {
+          "name": "voter",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  118,
+                  111,
+                  116,
+                  101
+                ]
+              },
+              {
+                "kind": "arg",
+                "path": "election_id"
+              },
+              {
+                "kind": "account",
+                "path": "voter_signer"
+              }
+            ]
+          }
+        },
+        {
+          "name": "voter_signer",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "election_id",
+          "type": "string"
+        },
+        {
+          "name": "candidate_key",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "close_election",
+      "discriminator": [
+        62,
+        216,
+        57,
+        149,
+        90,
+        21,
+        40,
+        127
+      ],
+      "accounts": [
+        {
+          "name": "election",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  101,
+                  108,
+                  101,
+                  99,
+                  116,
+                  105,
+                  111,
+                  110
+                ]
+              },
+              {
+                "kind": "arg",
+                "path": "election_id"
+              },
+              {
+                "kind": "account",
+                "path": "election_generator"
+              }
+            ]
+          }
+        },
+        {
+          "name": "election_generator",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "election_id",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "create_election",
+      "discriminator": [
+        190,
+        206,
+        84,
+        42,
+        83,
+        221,
+        248,
+        249
+      ],
+      "accounts": [
+        {
+          "name": "election",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  101,
+                  108,
+                  101,
+                  99,
+                  116,
+                  105,
+                  111,
+                  110
+                ]
+              },
+              {
+                "kind": "arg",
+                "path": "election_id"
+              },
+              {
+                "kind": "account",
+                "path": "election_generator"
+              }
+            ]
+          }
+        },
+        {
+          "name": "election_generator",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "election_id",
+          "type": "string"
+        },
+        {
+          "name": "election_title",
+          "type": "string"
+        },
+        {
+          "name": "election_description",
+          "type": "string"
+        }
+      ]
+    }
+  ],
+  "accounts": [
+    {
+      "name": "CandidateAccountState",
+      "discriminator": [
+        252,
+        251,
+        4,
+        191,
+        191,
+        210,
+        187,
+        154
+      ]
+    },
+    {
+      "name": "ElectionAccountState",
+      "discriminator": [
+        175,
+        152,
+        224,
+        124,
+        196,
+        98,
+        235,
+        201
+      ]
+    },
+    {
+      "name": "VoteAccount",
+      "discriminator": [
+        203,
+        238,
+        154,
+        106,
+        200,
+        131,
+        0,
+        41
+      ]
+    }
+  ],
+  "errors": [
+    {
+      "code": 6000,
+      "name": "ElectionIdTooLong",
+      "msg": "Election ID too long!"
+    },
+    {
+      "code": 6001,
+      "name": "CANDIDATEKEYTOOLONG",
+      "msg": "Candidate key too long!"
+    },
+    {
+      "code": 6002,
+      "name": "CandidateNameTooLong",
+      "msg": "Election Name too long!"
+    },
+    {
+      "code": 6003,
+      "name": "CandidateSloganTooLong",
+      "msg": "Election Slogan too long!"
+    },
+    {
+      "code": 6004,
+      "name": "ElectionDoesNotExist",
+      "msg": "Election is not created yet!"
+    }
+  ],
+  "types": [
+    {
+      "name": "CandidateAccountState",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "election_id",
+            "type": "string"
+          },
+          {
+            "name": "candidate_key",
+            "type": "string"
+          },
+          {
+            "name": "candidate_name",
+            "type": "string"
+          },
+          {
+            "name": "candidate_slogan",
+            "type": "string"
+          },
+          {
+            "name": "vote_counts",
+            "type": "u32"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ElectionAccountState",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "election_generator",
+            "type": "pubkey"
+          },
+          {
+            "name": "election_id",
+            "type": "string"
+          },
+          {
+            "name": "election_title",
+            "type": "string"
+          },
+          {
+            "name": "election_description",
+            "type": "string"
+          },
+          {
+            "name": "is_active",
+            "type": "bool"
+          }
+        ]
+      }
+    },
+    {
+      "name": "VoteAccount",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "voter",
+            "type": "pubkey"
+          },
+          {
+            "name": "election_id",
+            "type": "string"
+          },
+          {
+            "name": "candidate_key",
+            "type": "string"
+          }
+        ]
+      }
+    }
+  ]
+}
